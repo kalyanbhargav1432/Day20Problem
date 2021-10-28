@@ -54,4 +54,17 @@ public class UserValidationTest {
 		Assert.assertFalse(result);
 	}
 
+	@Test
+	public void givenMobileNumberCheckForValidationRerunTrue() {
+		UserValidation validator = new UserValidation();
+		boolean result = validator.validateMobileNumber("91 9876546789");
+		Assert.assertTrue(result);
+	}
+
+	@Test
+	public void givenMobileNumberCheckForValidationRerunFalse() {
+		UserValidation validator = new UserValidation();
+		boolean result = validator.validateMobileNumber("919876546789");
+		Assert.assertFalse(result);
+	}
 }
