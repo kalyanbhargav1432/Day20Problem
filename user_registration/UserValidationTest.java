@@ -26,4 +26,18 @@ public class UserValidationTest {
 		Assert.assertFalse(result);
 	}
 
+	@Test
+	public void givenTwoLetterCheckForValidationForLastNameReturnTrue() {
+		UserValidation validator = new UserValidation();
+		boolean result = validator.validateFirstName("Tanniru");
+		Assert.assertTrue(result);
+	}
+
+	@Test
+	public void givenTwoSmallLettersCheckForValidationLastNameReturnFalse() {
+		UserValidation validator = new UserValidation();
+		boolean result = validator.validateFirstName("tanniru");
+		Assert.assertFalse(result);
+	}
+
 }
