@@ -40,4 +40,18 @@ public class UserValidationTest {
 		Assert.assertFalse(result);
 	}
 
+	@Test
+	public void givenTwoSmallsCheckForValidationForEmailRerunTrue() {
+		UserValidation validator = new UserValidation();
+		boolean result = validator.validateEmail("abc.xyz@bl.com");
+		Assert.assertTrue(result);
+	}
+
+	@Test
+	public void givenTwoSmallsCheckForValidationForEmailRerunFalse() {
+		UserValidation validator = new UserValidation();
+		boolean result = validator.validateEmail("abc.xyz@bl");
+		Assert.assertFalse(result);
+	}
+
 }
