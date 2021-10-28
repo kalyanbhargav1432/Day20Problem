@@ -67,4 +67,18 @@ public class UserValidationTest {
 		boolean result = validator.validateMobileNumber("919876546789");
 		Assert.assertFalse(result);
 	}
+
+	@Test
+	public void givenPassWordCheckForValidationRerunTrue() {
+		UserValidation validator = new UserValidation();
+		boolean result = validator.validatePassWord("kalyanabc");
+		Assert.assertTrue(result);
+	}
+
+	@Test
+	public void givenPassWordLessthan8LettersCheckForValidationRerunFalse() {
+		UserValidation validator = new UserValidation();
+		boolean result = validator.validatePassWord("kalyan");
+		Assert.assertFalse(result);
+	}
 }
