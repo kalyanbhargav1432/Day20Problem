@@ -69,14 +69,14 @@ public class UserValidationTest {
 	}
 
 	@Test
-	public void givenPassWordCheckForValidationRule2RerunTrue() {
+	public void givenPassWordCheckForValidationRule3RerunTrue() {
 		UserValidation validator = new UserValidation();
-		boolean result = validator.validatePassWord("Kalyanabc");
+		boolean result = validator.validatePassWord("Kalyan123");
 		Assert.assertTrue(result);
 	}
 
 	@Test
-	public void givenPassWordLessthan8LettersCheckForValidationRule2RerunFalse() {
+	public void givenPassWordLessthan8LettersCheckForValidationRule3RerunFalse() {
 		UserValidation validator = new UserValidation();
 		boolean result = validator.validatePassWord("kalyan");
 		Assert.assertFalse(result);
